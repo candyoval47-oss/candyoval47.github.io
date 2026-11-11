@@ -4,78 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelatih Voli</title>
+    <title>JUAL BELI SPORT</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">VOLLEY<span>COACH</span></div>
+        <div class="logo">JUAL BELI <span>SPORT</span></div>
+
         <nav>
             <a href="#home">Home</a>
-            <a href="#profil">Profil</a>
-            <a href="#program">Program</a>
+            <a href="#produk">Produk</a>
+            <a href="#tentang">Tentang</a>
             <a href="#kontak">Kontak</a>
         </nav>
     </header>
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h4>WELCOME TO VOLLEYBALL TRAINING</h4>
-            <h1>JADILAH<br>PELATIH <span>VOLI</span></h1>
-            <p>
-                Membangun atlet berprestasi dengan disiplin,
-                kerja keras, semangat, dan kekompakan tim.
-            </p>
-            <a href="#profil" class="btn">SELENGKAPNYA</a>
+            <h1>SELAMAT DATANG DI<br>
+            <span>JUAL BELI SPORT</span></h1>
+            <p>Temukan perlengkapan olahraga terbaik
+            dengan harga terjangkau dan kualitas terbaik.</p>
+            <a href="#produk" class="btn">BELANJA SEKARANG</a>
         </div>
     </section>
 
-    <section class="profil" id="profil">
-        <h2>TENTANG PELATIH</h2>
-        <p>
-            Pelatih voli adalah sosok yang membimbing,
-            melatih, dan mengembangkan kemampuan atlet
-            untuk mencapai prestasi terbaik.
-        </p>
-    </section>
+    <section class="produk" id="produk">
+        <h2>PRODUK KAMI</h2>
+        <p class="subjudul">Pilihan perlengkapan olahraga terbaik</p>
 
-    <section class="program" id="program">
-        <h2>PROGRAM LATIHAN</h2>
+        <div class="produk-container">
 
-        <div class="cards">
             <div class="card">
-                <h3>TEKNIK DASAR</h3>
-                <p>Passing, servis, smash, blocking,
-                dan teknik permainan bola voli.</p>
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+                alt="Sepatu olahraga">
+                <h3>Sepatu Sport</h3>
+                <p>Sepatu olahraga nyaman dan berkualitas.</p>
+                <h4>Rp250.000</h4>
+                <button onclick="pesan('Sepatu Sport')">Beli Sekarang</button>
             </div>
 
             <div class="card">
-                <h3>LATIHAN FISIK</h3>
-                <p>Meningkatkan kekuatan, kecepatan,
-                kelincahan, dan daya tahan atlet.</p>
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500"
+                alt="Bola sepak">
+                <h3>Bola Sepak</h3>
+                <p>Bola sepak untuk latihan dan pertandingan.</p>
+                <h4>Rp150.000</h4>
+                <button onclick="pesan('Bola Sepak')">Beli Sekarang</button>
             </div>
 
             <div class="card">
-                <h3>STRATEGI TIM</h3>
-                <p>Membangun kerja sama dan strategi
-                untuk memenangkan pertandingan.</p>
+                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=500"
+                alt="Bola basket">
+                <h3>Bola Basket</h3>
+                <p>Bola basket berkualitas untuk bermain.</p>
+                <h4>Rp180.000</h4>
+                <button onclick="pesan('Bola Basket')">Beli Sekarang</button>
             </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=500"
+                alt="Raket badminton">
+                <h3>Raket Badminton</h3>
+                <p>Raket ringan dan nyaman digunakan.</p>
+                <h4>Rp120.000</h4>
+                <button onclick="pesan('Raket Badminton')">Beli Sekarang</button>
+            </div>
+
         </div>
     </section>
 
-    <section class="motivasi">
-        <h2>SEMANGAT JUARA!</h2>
+    <section class="tentang" id="tentang">
+        <h2>TENTANG KAMI</h2>
         <p>
-            "Kemenangan bukan hanya tentang bakat,
-            tetapi tentang disiplin dan kerja keras."
+            JUAL BELI SPORT adalah toko perlengkapan olahraga
+            yang menyediakan berbagai macam produk olahraga
+            dengan harga terjangkau dan kualitas terbaik.
         </p>
     </section>
 
-    <footer id="kontak">
-        <h3>VOLLEY COACH</h3>
-        <p>© 2026 Pelatih Voli | All Rights Reserved</p>
+    <section class="kontak" id="kontak">
+        <h2>HUBUNGI KAMI</h2>
+        <p>Ingin membeli produk olahraga? Hubungi kami sekarang!</p>
+        <a href="https://wa.me/6281234567890" class="btn">
+            HUBUNGI VIA WHATSAPP
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 JUAL BELI SPORT. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function pesan(produk) {
+            const nomor = "6281234567890";
+            const pesan = "Halo, saya ingin membeli " + produk;
+            window.open(
+                "https://wa.me/" + nomor + "?text=" +
+                encodeURIComponent(pesan), "_blank"
+            );
+        }
+    </script>
 
 </body>
 </html>
